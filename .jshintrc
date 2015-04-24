@@ -1,0 +1,5 @@
+{
+  "undef": true,
+  "unused": false,
+  "predef": [ "angular", "window", "StatusBar", "cordova" ]
+}
