@@ -1,6 +1,6 @@
 angular.module('parkey.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('LoginCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();

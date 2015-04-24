@@ -42,8 +42,8 @@ angular.module('parkey', ['ionic', 'parkey.controllers', 'parkey.services'])
     url: '/dash',
     views: {
       'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+        templateUrl: 'templates/tab-login.html',
+        controller: 'LoginCtrl'
       }
     }
   })
