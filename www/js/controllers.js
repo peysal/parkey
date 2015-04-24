@@ -13,7 +13,7 @@ angular.module('parkey.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('SearchCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
   };
