@@ -38,10 +38,10 @@ angular.module('parkey', ['ionic', 'parkey.controllers', 'parkey.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.login', {
+    url: '/login',
     views: {
-      'tab-dash': {
+      'tab-login': {
         templateUrl: 'templates/tab-login.html',
         controller: 'LoginCtrl'
       }
@@ -78,6 +78,6 @@ angular.module('parkey', ['ionic', 'parkey.controllers', 'parkey.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/login');
 
 });
