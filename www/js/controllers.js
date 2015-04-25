@@ -14,6 +14,7 @@ angular.module('parkey.controllers', [])
 })
 
 .controller('SearchCtrl', function ($scope, $ionicModal) {
+    $scope.form = {};
     $ionicModal.fromTemplateUrl('tab-search-modal-result.html', {
         scope: $scope,
         animation: 'slide-in-up'
@@ -22,6 +23,7 @@ angular.module('parkey.controllers', [])
     });
     $scope.openModal = function () {
         $scope.modal.show();
+        console.log('SearchCtrl-> searchInput:' + $scope.form.searchInput);
     };
     $scope.closeModal = function () {
         $scope.modal.hide();
