@@ -2,17 +2,6 @@ angular.module('parkey.controllers', [])
 
 .controller('LoginCtrl', function ($scope) {})
 
-.controller('ChatsCtrl', function ($scope, Chats) {
-    $scope.chats = Chats.all();
-    $scope.remove = function (chat) {
-        Chats.remove(chat);
-    };
-})
-
-.controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {
-    $scope.chat = Chats.get($stateParams.chatId);
-})
-
 .controller('SearchCtrl', function ($scope, $ionicModal) {
     $scope.form = {};
     $ionicModal.fromTemplateUrl('tab-search-modal-result.html', {
