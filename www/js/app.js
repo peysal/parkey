@@ -48,6 +48,16 @@ angular.module('parkey', ['ionic', 'parkey.controllers', 'parkey.services'])
     }
   })
 
+  .state('tab.logged', {
+    url: '/loggedin',
+    views: {
+      'tab-login': {
+        templateUrl: 'templates/tab-logout.html',
+        controller: 'LoginCtrl'
+      }
+    }
+  })
+
   .state('tab.search', {
     url: '/search',
     views: {

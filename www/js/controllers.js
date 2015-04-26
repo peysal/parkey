@@ -1,6 +1,13 @@
 angular.module('parkey.controllers', [])
 
-.controller('LoginCtrl', function ($scope) {})
+.controller('LoginCtrl', function ($scope, $state) {
+    $scope.authentication = {};
+    $scope.login = function() {
+        $scope.authentication.loggedIn = true;
+        console.log('LoginCtrl-> login:' + $scope.authentication.loggedIn);
+        $state.go('tab.logged');
+    };
+})
 
 .controller('SearchCtrl', function ($scope, $ionicModal) {
     $scope.form = {};
