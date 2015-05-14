@@ -2,9 +2,19 @@ angular.module('parkey.controllers', [])
 
 .controller('LoginCtrl', function ($scope, $state) {
     $scope.authentication = {};
-    $scope.login = function() {
+    $scope.login = function () {
         $scope.authentication.loggedIn = true;
         console.log('LoginCtrl-> login:' + $scope.authentication.loggedIn);
+        Parse.initialize("il1qy2ZyYoYtI7oXckZXVaELaeLsaxlVjHnRSy6Q", "ShLwaR6OOE2qy8M0nnMXdxNt4i75Qk9A5e6hD9Mc");
+
+        var TestObject = Parse.Object.extend("TestObject");
+        var testObject = new TestObject();
+        testObject.save({
+            foo: "bar"
+        }).then(function (object) {
+            console.log("yay! it worked");
+        });
+
         $state.go('tab.logged');
     };
 })
